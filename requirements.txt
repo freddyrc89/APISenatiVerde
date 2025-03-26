@@ -35,3 +35,6 @@ typing_extensions==4.12.2
 uvicorn==0.34.0
 watchfiles==1.0.4
 websockets==15.0.1
+#pip install pymysql
+#python -m uvicorn app.main:app --reload
+#pip install pydantic-settings
