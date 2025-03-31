@@ -11,11 +11,17 @@ class AlumnoSchema(BaseModel):
     class Config:
         from_attributes = True
 
-class AccesoCreateSchema(BaseModel):
-    dni: str
-    estado_acceso: str
-    observaciones: str | None = None
-    qr_expira: datetime
+class CreacionQRBase(BaseModel):
+    dni_alumno: int
+    estado_qr: int
 
+class CreacionQRCreate(CreacionQRBase):
+    pass
+
+class CreacionQRResponse(CreacionQRBase):
+    id: int
+    fecha_creacion: datetime
+    
     class Config:
         from_attributes = True
+
